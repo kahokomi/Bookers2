@@ -1,0 +1,17 @@
+<h2>Users</h2>
+<table>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= attachment_image_tag post_image, :image %></td>
+      <td><%= @user.name %></td>
+      <td><%= link_to "show", user_path %></td>
+    </tr>
+  </tbody>
+</table>
