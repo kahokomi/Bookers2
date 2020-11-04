@@ -16,11 +16,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  padding-top: 70px;
+#flash {
+  color: green;
 }
 
-span {
+.body {
+  margin-top: 51px;
+}
+
+.navbar-left span {
   font-size: 20px;
   color: #fff;
 }
+

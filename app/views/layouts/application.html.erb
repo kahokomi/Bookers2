@@ -12,7 +12,7 @@
   <body>
     <header class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <nav class="nav navbar-nav navbar-left">
+        <nav class="navbar-nav navbar-left">
           <span>Bookers</span>
         </nav>
         <nav>
@@ -47,7 +47,17 @@
           </ul>
         </nav>
       </div>
+      </div>
     </header>
-    <%= yield %>
+    <div class="body">
+      <div class="container">
+        <% if flash[:notice] %>
+          <p id="flash">
+          <%= flash[:notice] %>
+          </p>
+        <% end %>
+      <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
