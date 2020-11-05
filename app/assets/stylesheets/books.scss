@@ -1,3 +1,21 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#error_explanation {
+  color: red;
+}
+
+.editlink {
+  color: #666;
+}
+
+.btn-sm.btn-success,
+.btn-sm.btn-danger {
+    color: #666;
+}
+
+.btn-sm.btn-success:hover,
+.btn-sm.btn-danger:hover {
+    color: #fff;
+}
+

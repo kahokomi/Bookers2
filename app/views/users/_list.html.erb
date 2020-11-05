@@ -1,36 +1,35 @@
-<div class="row">
-  <div class="col-md-3">
-    <h2>User info</h2>
-    <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
-      <table class="table">
-        <tbody>
-          <tr></tr>
-          <tr>
-            <th>Name</th>
-            <th><%= user.name %></th>
-          </tr>
-          <tr>
-            <th>Introduction</th>
-            <th><%= user.introduction %></th>
-          </tr>
-        </tbody>
-      </table>
-    <div class="row">
-      <%= link_to "edit", edit_user_path(user) %>
-    </div>
-    
-    <h2>New Book</h2>
-      <%= form_with model:book, local:true do |f| %>
-        <div class="field">
-            <h4>Title</h4>
-            <%= f.text_field :title %>
-        </div>
-        <div class="field">
-            <h4>Opinion</h4>
-            <%= f.text_area :body %>
-        </div>
-        <div class="action">
-            <%= f.submit 'Create Book' %>
-        </div>
-      <% end %>
+<h2>User info</h2>
+  <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+    <table class="table">
+      <tbody>
+        <tr></tr>
+        <tr>
+          <th>Name</th>
+          <th><%= user.name %></th>
+        </tr>
+        <tr>
+          <th>Introduction</th>
+          <th><%= user.introduction %></th>
+        </tr>
+      </tbody>
+    </table>
+  <div class="row">
+    <%= link_to edit_user_path(user), class: "col-md-12 btn btn-default" do %>
+      <span class="glyphicon glyphicon-wrench"></span>
+    <% end %>
   </div>
+
+  <h2>New book</h2>
+    <%= form_with model:book, local:true do |f| %>
+      <div class="field row">
+          <h4>Title</h4>
+          <%= f.text_field :title, class: 'col-md-12' %>
+      </div>
+      <div class="field row">
+          <h4>Opinion</h4>
+          <%= f.text_area :body, class: 'col-md-12' %>
+      </div>
+      <div class="action row">
+          <%= f.submit('Create Book',class: 'btn btn-primary col-md-12') %>
+      </div>
+    <% end %>

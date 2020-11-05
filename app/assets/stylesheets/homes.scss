@@ -2,4 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.btn.btn-info.col-md-10.col-md-offset-1 {
+  color: #666;
+}
 
+.btn.btn-info.col-md-10.col-md-offset-1:hover {
+  color: #fff;
+}
+
+.btn.btn-success.col-md-10.col-md-offset-1 {
+  color: #666;
+}
+
+.btn.btn-success.col-md-10.col-md-offset-1:hover {
+  color: #fff;
+}
